@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import warnings
 import joblib
-from joblib import load
+
 
 warnings.filterwarnings("ignore")
 
