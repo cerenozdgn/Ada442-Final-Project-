@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import warnings
-from joblib import load
+import joblib
 
 warnings.filterwarnings("ignore")
 
@@ -66,7 +66,7 @@ input_data = pd.DataFrame({
 })
 
 # Load the model using Joblib
-model=load('tuned_best_model.pkl')
+model=joblib.load('tuned_best_model.pkl')
 
 def predict_display():
     input_predictions = model.predict(input_data)
