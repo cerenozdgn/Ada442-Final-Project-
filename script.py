@@ -66,8 +66,9 @@ input_data = pd.DataFrame({
 })
 
 # Load the model using Joblib
-dump(model, 'tuned_best_model.pkl')
+
 model=load('tuned_best_model.pkl')
+dump(model, 'tuned_best_model.pkl')
 
 def predict_display():
     input_predictions = model.predict(input_data)
