@@ -68,7 +68,13 @@ input_data = pd.DataFrame({
 
 # Load the model using Joblib
 
-model=joblib.load('tuned_best_model.pkl')
+# Load the model using Joblib
+try:
+    model = joblib.load('tuned_best_model.pkl')
+except FileNotFoundError:
+    st.error("Model file not found. Please ensure the 'tuned_best_model.pkl' file is in the correct directory.")
+except Exception as e:
+    st.error(f"An error occurred while loading the model: {e}")
 
 
 def predict_display():
