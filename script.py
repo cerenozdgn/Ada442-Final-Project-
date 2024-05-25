@@ -67,7 +67,7 @@ input_data = pd.DataFrame({
 })
 
 # Load the model using Joblib
-    model = joblib.load('tuned_best_model.pkl')
+model = joblib.load('tuned_best_model.pkl')
 
 
 
